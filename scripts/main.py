@@ -13,7 +13,7 @@ import Clustering             # Step 4: Clustering Technique Analysis
 def step_1_data_processing():
     print("\nStep 1: Starting data processing...")
     try:
-        EDA.data_processing()
+        data_processing.run_data_processing()
         print("Data processing completed.\n")
     except Exception as e:
         print(f"Error in Step 1: {e}")
