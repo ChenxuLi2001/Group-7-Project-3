@@ -12,7 +12,7 @@ A data science project analyzing Federal Statistical Research Data Center (FSRDC
 When simulating this project, please keep everything in order.
 .
 ├── data/ # Final output dataset
-│ └── ResearchOutputs_Group7.csv
+│ └── ResearchOutputs_Group7.xlsx
 ├── scripts/ # Analysis code and data files needed
 │ ├── main.py # Main pipeline
 │ ├── data_processing.py
