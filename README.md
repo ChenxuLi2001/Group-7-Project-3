@@ -1,5 +1,5 @@
 # Group 7 Project 3
-# GitHub Pages: 
+# GitHub Pages: https://github.com/ChenxuLi2001/Group-7-Project-3
 # Last Updated: May 2025 
 
 ## Overview
