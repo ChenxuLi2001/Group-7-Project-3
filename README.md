@@ -42,6 +42,85 @@ When simulating this project, please keep everything in order:
 ├── style.css                     # Custom styling  
 └── requirements.txt              # Prerequisites
 ```
+
+## Visualizations
+
+### PCA Scree Plot (Top 5 Components)  
+![PCA Scree Plot](visualizations/Picture1.png)  
+*Figure 1. Variance explained by top 5 PCA components.*
+
+---
+
+### Clustering Scatter Plot (UMAP)  
+![Clustering Scatter](visualizations/Picture2.png)  
+*Figure 2. UMAP projection of clustered research outputs.*
+
+---
+
+### Publications Over Time  
+![Publications](visualizations/Picture3.png)  
+*Figure 3. Number of FSRDC-related publications per year.*
+
+---
+
+### Citation Distribution  
+![Citation Distribution](visualizations/Picture4.png)  
+*Figure 4. Distribution of citation counts across outputs.*
+
+---
+
+### Output Count Histogram  
+![Output Count Histogram](visualizations/Picture5.png)  
+*Figure 5. Distribution of number of outputs per project.*
+
+---
+
+### Confusion Matrix (Classification Model)  
+![Confusion Matrix](visualizations/Picture6.png)  
+*Figure 6. Confusion matrix for the model predicting output status.*
+
+---
+
+### PCA Scree Plot (Full)  
+![PCA Scree Full](visualizations/Picture7.png)  
+*Figure 7. Variance explained by all PCA components.*
+
+---
+
+### Word Frequency by Year  
+![Word Frequency](visualizations/Picture13.png)  
+*Figure 8. Top keyword trends over time.*
+
+---
+
+### Authors Per Cluster  
+![Authors per Cluster](visualizations/Picture12.png)  
+*Figure 9. Author distribution across clusters.*
+
+---
+
+### Sentiment Score Distribution  
+![Sentiment Score](visualizations/Picture11.png)  
+*Figure 10. Sentiment polarity scores from research abstracts.*
+
+---
+
+### LDA Topic Terms  
+![LDA Topics](visualizations/Picture10.png)  
+*Figure 11. Top terms in each LDA-generated research topic.*
+
+---
+
+### Agglomerative Clustering  
+![Agglomerative Clustering](visualizations/Picture9.png)  
+*Figure 12. Ward linkage-based clustering of research documents.*
+
+---
+
+### Network Degree Distribution  
+![Network Degree](visualizations/Picture8.png)  
+*Figure 13. Degree distribution in the document similarity graph.*
+
 ## Simulations
 When testing the results of this project, researchers should follow several steps:
 1. Download all the files and arrange them like in the ## Files section.
