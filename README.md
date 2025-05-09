@@ -1,5 +1,4 @@
 # Group 7 Project 3
-# GitHub Pages: https://github.com/ChenxuLi2001/Group-7-Project-3
 # Last Updated: May 2025 
 
 ## Overview
@@ -7,6 +6,17 @@ A data science project analyzing Federal Statistical Research Data Center (FSRDC
 - **Python** data processing
 - **Interactive visualizations** 
 - **GitHub Pages**
+
+## Project 3 Description
+
+This project represents the final stage of our multi-phase pipeline analyzing FSRDC-related research outputs. It involved consolidating datasets from eight independent student groups, each of which explored top researchers, institutions, and topics using different methodologies.
+
+Our primary objective was to develop a scalable, validated, and enriched dataset that could serve as a unified foundation for advanced analysis. To achieve this, we engineered a robust Python pipeline that:
+
+- Normalized and deduplicated data from over 39,000 raw records
+- Applied fuzzy matching and TF-IDF similarity to validate project affiliations
+- Enriched incomplete entries using the CrossRef and OpenAlex APIs
+- Merged final results with official metadata from ResearchOutputs.xlsx
 
 ## Files
 
@@ -127,17 +137,6 @@ When testing the results of this project, researchers should follow several step
 2. According to requirements.txt, prepare the python environment and libraries.
 3. Run the scripts according to the order showed in main.py file.
 4. Open the dashboard.html to check the results.
-
-## Project 3 Description
-
-This project represents the final stage of our multi-phase pipeline analyzing FSRDC-related research outputs. It involved consolidating datasets from eight independent student groups, each of which explored top researchers, institutions, and topics using different methodologies.
-
-Our primary objective was to develop a scalable, validated, and enriched dataset that could serve as a unified foundation for advanced analysis. To achieve this, we engineered a robust Python pipeline that:
-
-- Normalized and deduplicated data from over 39,000 raw records
-- Applied fuzzy matching and TF-IDF similarity to validate project affiliations
-- Enriched incomplete entries using the CrossRef and OpenAlex APIs
-- Merged final results with official metadata from ResearchOutputs.xlsx
 
 We then conducted a series of analytical tasks using Python:
 
