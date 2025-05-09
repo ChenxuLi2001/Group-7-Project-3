@@ -13,7 +13,7 @@ import Clustering             # Step 4: Clustering Technique Analysis
 def step_1_data_processing():
     print("\nStep 1: Starting data processing...")
     try:
-        EDA.run_EDA()
+        EDA.data_processing()
         print("Data processing completed.\n")
     except Exception as e:
         print(f"Error in Step 1: {e}")
@@ -37,7 +37,7 @@ def step_3_classification_PCA():
         print(f"Error in Step 3: {e}")
 
 # STEP 4: Clean, deduplicate, and FSRDC-filter the metadata
-def step_3_Clustering():
+def step_4_Clustering():
     print("\nStep 4: Processing Clustering...")
     try:
         Clustering.run_Clustering()
