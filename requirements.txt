@@ -1,0 +1,32 @@
+# Project 3 - FSRDC Research Output Pipeline
+# Group 7 - CIT5900 (Spring 2025)
+# ------------------------------------------
+# This file includes all required packages and expected input files.
+# You can install dependencies using:
+#     pip install -r requirements.txt
+# ------------------------------------------
+
+# ========== Python Package Dependencies ==========
+pandas             # For reading and writing CSV/Excel files
+numpy              # For numerical computations and array operations
+matplotlib         # For generating static EDA plots
+scikit-learn       # For PCA, classification, clustering, and preprocessing
+nltk               # For tokenization, lemmatization, and sentiment analysis
+umap-learn         # For dimensionality reduction (UMAP)
+plotly             # For interactive HTML visualizations (dashboards)
+beautifulsoup4     # For text normalization and HTML tag removal
+rapidfuzz          # For fast fuzzy string matching (PI, abstracts)
+requests           # For calling CrossRef and OpenAlex APIs
+networkx           # For building document similarity networks
+tqdm               # For progress bars during data processing
+ipython            # (Optional) For rich notebook/table displays
+
+# ========== Required Input Files ==========
+# Ensure these files are placed in the `scripts/` directory:
+# - group1.csv to group8.csv        → Raw FSRDC output from each team
+# - ProjectsAllMetadata.xlsx        → Authoritative metadata from FSRDC
+# - ResearchOutputs.xlsx            → Official FSRDC merged reference
+
+# ========== Output Files (Generated Automatically) ==========
+# - FinalCleanedMergedResearchOutputs.csv   → Master cleaned dataset
+# - ResearchOutputs_Group7.csv              → Final enriched deliverable
