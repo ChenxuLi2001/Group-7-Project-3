@@ -4,36 +4,46 @@
 
 # Import all processing modules
 import time                   # For tracking how long the pipeline takes
-import EDA                    # Step 1: EDA Analysis
-import Model_Analysis_PCA     # Step 2: Classification Model Analysis & PCA
-import Clustering             # Step 3: Clustering Technique Analysis
+import data_processing        # Step 1: Input Processing
+import EDA                    # Step 2: EDA Analysis
+import Model_Analysis_PCA     # Step 3: Classification Model Analysis & PCA
+import Clustering             # Step 4: Clustering Technique Analysis
 
-# STEP 1: Run the EDA Analysis code
-def step_1_EDA_analysis():
-    print("\nStep 1: Starting EDA analysis...")
+# STEP 1: Run the data processing code
+def step_1_data_processing():
+    print("\nStep 1: Starting data processing...")
+    try:
+        EDA.run_EDA()
+        print("Data processing completed.\n")
+    except Exception as e:
+        print(f"Error in Step 1: {e}")
+
+# STEP 2: Run the EDA Analysis code
+def step_2_EDA_analysis():
+    print("\nStep 2: Starting EDA analysis...")
     try:
         EDA.run_EDA()
         print("EDA analysis completed.\n")
     except Exception as e:
-        print(f"Error in Step 1: {e}")
+        print(f"Error in Step 2: {e}")
 
-# STEP 2: Run the Classification Model Analysis & PCA code
-def step_2_classification_PCA():
-    print("\nStep 2: Starting Classification Model Analysis & PCA...")
+# STEP 3: Run the Classification Model Analysis & PCA code
+def step_3_classification_PCA():
+    print("\nStep 3: Starting Classification Model Analysis & PCA...")
     try:
         Model_Analysis_PCA.run_Model_Analysis_PCA()
         print("Classification Model Analysis & PCA completed.\n")
     except Exception as e:
-        print(f"Error in Step 2: {e}")
+        print(f"Error in Step 3: {e}")
 
-# STEP 3: Clean, deduplicate, and FSRDC-filter the metadata
+# STEP 4: Clean, deduplicate, and FSRDC-filter the metadata
 def step_3_Clustering():
-    print("\nStep 3: Processing Clustering...")
+    print("\nStep 4: Processing Clustering...")
     try:
         Clustering.run_Clustering()
         print("Clustering completed.\n")
     except Exception as e:
-        print(f"Error in Step 3: {e}")
+        print(f"Error in Step 4: {e}")
 
 # Entrypoint: Run selected steps in sequence
 if __name__ == "__main__":
@@ -41,9 +51,10 @@ if __name__ == "__main__":
     start_time = time.time()  # Record start time
 
     # === UNCOMMENT the steps you want to run ===
-    # step_1_EDA_analysis()
-    # step_2_classification_PCA()
-    # step_3_Clustering()
+    # step_1_data_processing()
+    # step_2_EDA_analysis()
+    # step_3_classification_PCA()
+    # step_4_Clustering()
 
     total_time = round(time.time() - start_time, 2)
     print(f"Pipeline completed in {total_time} seconds.")
