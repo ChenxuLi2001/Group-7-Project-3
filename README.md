@@ -9,6 +9,7 @@ A data science project analyzing Federal Statistical Research Data Center (FSRDC
 - **GitHub Pages**
 
 ## Files
+When simulating this project, please keep everything in order.
 .
 ├── data/ # Processed datasets
 │ └── ResearchOutputs_Group7.xlsx
