@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CIT5900 Group 7 Project 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>FSRDC Research Output Analysis</h1>
+    <p class="p1">This web page shows the FSRDC research outputs and corresponding analysis by Group 7.</p>
+    <section id="EDA_analysis">
+        <h2>Results of EDA Analysis</h2>
+        <p class="p2">This section displays the results of the EDA analysis.</p>
+
+        <h3>Top 10 RDCs</h3>
+        <p class="p3">This figure shows the RDCs that are the top 10 performers in terms of research outputs.</p>
+        <div class="center-box">
+            <img src="visualizations/RDC.png" alt="Top RDCs">
+            <p class="caption">Top 10 RDCs by Research Output Count</p>
+        </div>
+        
+        <h3>Quantity Statistics of Publications</h3>
+        <p class="p3">This figure shows the number of FSRDC publications per year.</p>
+        <div class="center-box">
+            <img src="visualizations/Publications.png" alt="Publication Numbers">
+            <p class="caption">Publication Numbers per Year</p>
+        </div>
+        
+        <h3>Top 10 Most Prolific Authors</h3>
+        <p class="p3">This figure shows the top 10 most prolific authors.</p>
+        <div class="center-box">
+            <img src="visualizations/Authors.png" alt="Authors">
+            <p class="caption">Top 10 Most Prolific Authors</p>
+        </div>        
+
+        <h3>Citation Count Distribution</h3>
+        <p class="p3">This figure shows the distribution of citation counts.</p>
+        <div class="center-box">
+            <img src="visualizations/Citation.png" alt="Citation Distribution">
+            <p class="caption">Distribution of Citation Counts</p>
+        </div>   
+    </section>
+
+    <section id="Regression or Classification">
+        <h2>Insights from Regression or Classification Models</h2>
+        <p class="p2">
+            This section shows how the group defined what to study before diving in. 
+            The insights obtained are also displayed.
+        </p>
+
+        <h3>Statistical Table of Null Values</h3>
+        <p class="p3">This table records the number of null values in the dataset.</p>
+        <table class="table">
+            <caption>Null Value Statistics</caption>
+            <thead>
+                <tr>
+                    <th>Column Name</th>
+                    <th>null_count</th>
+                    <th>null_percent (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>ProjID</td><td>82</td><td>3.86</td></tr>
+                <tr><td>ProjectStatus</td><td>82</td><td>3.86</td></tr>
+                <tr><td>ProjectTitle</td><td>281</td><td>13.24</td></tr>
+                <tr><td>ProjectRDC</td><td>1</td><td>0.05</td></tr>
+                <tr><td>ProjectYearStarted</td><td>281</td><td>13.24</td></tr>
+                <tr><td>ProjectYearEnded</td><td>813</td><td>38.29</td></tr>
+                <tr><td>ProjectPI</td><td>1</td><td>0.05</td></tr>
+                <tr><td>OutputTitle</td><td>1</td><td>0.05</td></tr>
+                <tr><td>OutputBiblio</td><td>843</td><td>39.71</td></tr>
+                <tr><td>OutputType</td><td>0</td><td>0.00</td></tr>
+                <tr><td>OutputStatus</td><td>1</td><td>0.05</td></tr>
+                <tr><td>OutputVenue</td><td>301</td><td>14.18</td></tr>
+                <tr><td>OutputYear</td><td>9</td><td>0.42</td></tr>
+                <tr><td>OutputMonth</td><td>1208</td><td>56.90</td></tr>
+                <tr><td>OutputVolume</td><td>1279</td><td>60.24</td></tr>
+                <tr><td>OutputNumber</td><td>1144</td><td>53.89</td></tr>
+                <tr><td>OutputPages</td><td>1275</td><td>60.06</td></tr>
+            </tbody>
+        </table>
+        <p class="p3">According to the table, there are missing values in the dataset.</p>
+        <p class="p3">We decided to classify whether the output was published, forthcoming or unpublished.</p> 
+        <p class="p3">The metadata used as the evidence by the classification model is the columns having less than 5% null values.</p>
+
+        <h3>Classification Results</h3>
+        <p class="p3">This figure shows the prediction results of the model.</p>
+        <div class="center-box">
+            <img src="visualizations/ModelPrediction.png" alt="Classification Prediction">
+            <p class="caption">Prediction Results of Classification</p>
+        </div>
+        <p class="p3">This figure shows that all forthcoming (FC) outputs were correctly predicted.</p>
+        <p class="p3">However, some published outputs were incorrectly selected as forthcoming.</p>
+    </section>
+
+    <section id="PCA">
+        <h2>Insights from PCA</h2>
+        <p class="p2">
+            This section shows the insights obtained through Principal Component Analysis (PCA).
+        </p>
+
+        <h3>PCA Preparations</h3>
+        <p class="p3">Columns that were attempted to use: OutputYear, ProjectStatus, ProjectRDC.</p> 
+        <p class="p3">However, when One Hot Encoding was applied, we found that there were too many categories.</p>
+        <p class="p3">This means some small enough principal components were needed to represent the original data.</p>
+        <div class="center-box">
+            <img src="visualizations/PCA1.png" alt="PCA Scree 1">
+            <p class="caption">PCA Scree Plot</p>
+        </div>
+        <p class="p3">This figure shows that the PCs would have to be around 68 for effective usage.</p>
+        <p class="p3">The top drivers for the first 2 principal components are:</p>
+        <table class="table">
+            <caption>Top drivers of PC1</caption>
+            <thead>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Weight</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>ProjectStatus_Active</td><td>0.621601</td></tr>
+                <tr><td>ProjectStatus_Completed</td><td>0.621601</td></tr>
+                <tr><td>ProjectRDC_washington</td><td>0.121841</td></tr>
+                <tr><td>ProjectRDC_kentucky</td><td>0.109406</td></tr>
+                <tr><td>ProjectRDC_missouri</td><td>0.107967</td></tr>
+                <tr><td>ProjectRDC_Penn State</td><td>0.103984</td></tr>
+                <tr><td>ProjectRDC_Washington</td><td>0.100418</td></tr>
+                <tr><td>ProjectRDC_Atlanta</td><td>0.097183</td></tr>
+                <tr><td>ProjectRDC_Michigan</td><td>0.095922</td></tr>
+                <tr><td>ProjectRDC_Boston</td><td>0.093906</td></tr>
+            </tbody>
+        </table>
+        <table class="table">
+            <caption>Top drivers of PC2</caption>
+            <thead>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Weight</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>OutputYear</td><td>0.686427</td></tr>
+                <tr><td>ProjectRDC_nebraska</td><td>0.389875</td></tr>
+                <tr><td>ProjectRDC_baruch</td><td>0.303420</td></tr>
+                <tr><td>ProjectRDC_boston</td><td>0.259174</td></tr>
+                <tr><td>ProjectRDC_chicago</td><td>0.251808</td></tr>
+                <tr><td>ProjectRDC_ucla</td><td>0.189104</td></tr>
+                <tr><td>ProjectRDC_texas</td><td>0.184618</td></tr>
+                <tr><td>ProjectRDC_Boston</td><td>0.132638</td></tr>
+                <tr><td>ProjectRDC_washington</td><td>0.122044</td></tr>
+                <tr><td>ProjectRDC_Baruch</td><td>0.085576</td></tr>
+            </tbody>
+        </table>
+        <p class="p3">The tables show there were too many categories to gain true insights.</p>
+
+        <h3>PCA Analysis</h3>
+        <p class="p3">PCA analysis was done on columns: ProjectYearStarted, ProjectYearEnded, OutputYear, PageCount, ProjectDuration.</p>
+        <div class="center-box">
+            <img src="visualizations/PCA2.png" alt="PCA Scree 2">
+            <p class="caption">PCA Scree Plot</p>
+        </div>
+        <p class="p3">This figure shows that the data could be explained with 2-3 components.</p>
+        <p class="p3">The top drivers for each component are:</p>
+        <table class="table">
+            <caption>Top drivers of PC1</caption>
+            <thead>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Weight</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>OutputYear</td><td>0.999985</td></tr>
+                <tr><td>ProjectYearEnded</td><td>0.004231</td></tr>
+                <tr><td>ProjectYearStarted</td><td>0.002831</td></tr>
+            </tbody>
+        </table>
+        <table class="table">
+            <caption>Top drivers of PC2</caption>
+            <thead>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Weight</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>PageCount</td><td>0.999985</td></tr>
+                <tr><td>ProjectYearStarted</td><td>-0.003731</td></tr>
+                <tr><td>ProjectYearEnded</td><td>-0.003567</td></tr>
+            </tbody>
+        </table>
+        <table class="table">
+            <caption>Top drivers of PC3</caption>
+            <thead>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Weight</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>ProjectYearEnded</td><td>0.763383</td></tr>
+                <tr><td>ProjectYearStarted</td><td>0.632506</td></tr>
+                <tr><td>ProjectDuration</td><td>0.130877</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="Clustering">
+        <h2>Insights from Clustering Techniques</h2>
+        <p class="p2">This section shows the insights obtained through clustering techniques.</p>
+        <p class="p2">The clustering was performed with KMeans and Agglomerative algorithms.</p>
+        <p class="p2">The result figures are shown as follows:</p>
+        
+        <div class="iframe-container">
+            <iframe src="figures.html" width="800" height="600" style="border:none;"></iframe>
+        </div>
+        
+        <p class="p2">From top to bottom, the figures represent:</p>
+        <p class="p4">Clustering Visualization:</p>
+        <p class="p3">The 2D scatters of the visualized clustering results. One for KMeans Algorithm and the next for Agglomerative Algorithm.</p>
+        <p class="p4">LDA Topic Terms:</p>
+        <p class="p3">The bar chart displaying topic keywords in the LDA results.</p>
+        <p class="p4">Sentiment Score Distribution:</p>
+        <p class="p3">The histogram displaying sentiment analysis results.</p>
+        <p class="p4">Author Amount Statistics:</p>
+        <p class="p3">The histogram recording the author number of each cluster.</p>
+        <p class="p4">Keyword Frequency Changes:</p>
+        <p class="p3">The line chart recording the frequency changes of the keywords according to various time orders.</p>
+        <p class="p4">Network Analysis:</p>
+        <p class="p3">The histogram showing the network degree distribution of the clustering.</p>
+    </section>
+</body>
+</html>

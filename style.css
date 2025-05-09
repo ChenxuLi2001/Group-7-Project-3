@@ -1,0 +1,96 @@
+h1 {
+    color: blue;
+    text-align: center;
+    font-family: "Times New Roman", Arial, sans-serif;
+}
+
+.p1 {
+    color: rgb(102, 102, 102);
+    font-family: "Times New Roman", Arial, sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+.p2 {
+    color: rgb(102, 102, 102);
+    font-family: "Times New Roman", Arial, sans-serif;
+    font-size: 16px;
+    text-align: left;
+}
+
+.p3 {
+    color: rgb(102, 102, 102);
+    font-family: "Times New Roman", Arial, sans-serif;
+    font-size: 16px;
+    text-align: left;
+    text-indent: 3em;
+}
+
+.p4 {
+    color: rgb(148, 38, 237);
+    font-family: "Times New Roman", Arial, sans-serif;
+    font-size: 16px;
+    text-align: left;
+    text-indent: 3em;
+}
+
+h2 {
+    color: rgb(38, 184, 233);
+    text-align: left;
+    font-family: "Times New Roman", Arial, sans-serif;
+}
+
+h3 {
+    color: rgb(7, 224, 173);
+    text-align: left;
+    text-indent: 2em;
+    font-family: "Times New Roman", Arial, sans-serif;
+}
+
+.center-box {
+    text-align: center;
+    margin-top: 20px;
+}
+  
+.center-box img {
+    width: 600px;
+    height: auto;
+}
+  
+.caption {
+    margin-top: 8px;
+    font-family: "Times New Roman", Arial, sans-serif;
+    font-size: 16px;
+    color: black;
+}
+
+.table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 30px auto;
+    font-family: Arial, sans-serif;
+}
+  
+.table th, .table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+  
+.table th {
+    background-color: #f5f5f5;
+}
+  
+.table caption {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.iframe-container {
+    text-align: center;
+}
+  
+.iframe-container iframe {
+    display: inline-block;
+}
